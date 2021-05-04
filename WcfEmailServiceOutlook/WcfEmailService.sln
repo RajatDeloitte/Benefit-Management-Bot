@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfEmailService", "WcfEmailService\WcfEmailService.csproj", "{7366545B-F2EC-47A1-9144-9E2FFAEC13BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFEmailServiceCOnsumer", "WCFEmailServiceCOnsumer\WCFEmailServiceCOnsumer.csproj", "{444E5CB9-68CA-4D17-8C9E-6CD686FDE86F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7366545B-F2EC-47A1-9144-9E2FFAEC13BB} = {7366545B-F2EC-47A1-9144-9E2FFAEC13BB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7366545B-F2EC-47A1-9144-9E2FFAEC13BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7366545B-F2EC-47A1-9144-9E2FFAEC13BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7366545B-F2EC-47A1-9144-9E2FFAEC13BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7366545B-F2EC-47A1-9144-9E2FFAEC13BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444E5CB9-68CA-4D17-8C9E-6CD686FDE86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444E5CB9-68CA-4D17-8C9E-6CD686FDE86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444E5CB9-68CA-4D17-8C9E-6CD686FDE86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444E5CB9-68CA-4D17-8C9E-6CD686FDE86F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {706367B7-D06F-445B-A31E-3D53D5A527AB}
+	EndGlobalSection
+EndGlobal

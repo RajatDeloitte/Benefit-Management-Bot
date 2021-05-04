@@ -1,0 +1,22 @@
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csprojAssemblyReference.cache
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.exe.config
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.exe
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.pdb
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.dll
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.pdb
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.dll.config
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csproj.CopyComplete
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.exe
+C:\Users\rajatarora9\source\repos\WcfEmailService\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.exe.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.exe
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WCFEmailServiceCOnsumer.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\bin\Debug\WcfEmailService.dll.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.csproj.CopyComplete
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.exe
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WCFEmailServiceCOnsumer\obj\Debug\WCFEmailServiceCOnsumer.pdb

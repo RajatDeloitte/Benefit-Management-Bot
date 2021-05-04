@@ -1,0 +1,14 @@
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\WcfEmailService.dll.config
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\WcfEmailService.dll
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\WcfEmailService.pdb
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.dll
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.pdb
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\bin\WcfEmailService.dll.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\bin\WcfEmailService.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\bin\WcfEmailService.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\obj\Debug\WcfEmailService.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\obj\Debug\WcfEmailService.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\obj\Debug\WcfEmailService.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService - Copy\WcfEmailService\obj\Debug\WcfEmailService.pdb
