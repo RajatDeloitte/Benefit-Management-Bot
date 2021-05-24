@@ -21,7 +21,8 @@ namespace WcfEmailService
 
         [OperationContract]
         [WebGet(UriTemplate = "/HelloWorld/")]
-        bool SendEmail(List<String> ToAddress, Object ValidationObject,String Subject);
+        bool SendEmail(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username,
+                                                                                                        string password, string port);
 
         // TODO: Add your service operations here
     }
@@ -46,6 +47,31 @@ namespace WcfEmailService
         {
             get { return stringValue; }
             set { stringValue = value; }
+        }
+    }
+
+    [DataContract]
+    public partial class SendEmailRequest
+    {
+        [DataMember]
+        public string[] ToAddress;
+
+        [DataMember]
+        public object ValidationObject;
+        
+        [DataMember]
+        public string Subject;
+
+
+        public SendEmailRequest()
+        {
+        }
+
+        public SendEmailRequest(string[] ToAddress, object ValidationObject, string Subject)
+        {
+            this.ToAddress = ToAddress;
+            this.ValidationObject = ValidationObject;
+            this.Subject = Subject;
         }
     }
 }

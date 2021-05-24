@@ -6,19 +6,44 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
     <html>
       <body>
-        <h2>Benefit Management Validation Bot</h2>
+        <h4>Hi All,</h4>
+        <div>
+          <h4>
+            Count of records processed - <xsl:value-of select="ValidationObject/totalRecords"/>
+          </h4>
+        </div>
+        <div>
+          <h4>
+            Count of records failed - <xsl:value-of select="ValidationObject/failedRecords"/>
+          </h4>
+        </div>
+        <h4>
+          <u>Summary</u>
+        </h4>
         <table border="1">
           <tr bgcolor="#9acd32">
-            <th>FieldName</th>
-            <th>Validation</th>
+            <th>Line Number</th>
+            <th>Identifier</th>
+            <th>Error Message</th>
+            <th>Record Type</th>
+            <th>Record Value</th>
           </tr>
-          <xsl:for-each select="DocValidation/Records/Record">
+          <xsl:for-each select="ValidationObject/erorrecords/EmailErrorRecord">
             <tr>
               <td>
-                <xsl:value-of select="fieldName"/>
+                <xsl:value-of select="lineNumber"/>
               </td>
               <td>
-                <xsl:value-of select="validation"/>
+                <xsl:value-of select="identifier"/>
+              </td>
+              <td>
+                <xsl:value-of select="validationMessage"/>
+              </td>
+              <td>
+                <xsl:value-of select="recordType"/>
+              </td>
+              <td>
+                <xsl:value-of select="recordValue"/>
               </td>
             </tr>
           </xsl:for-each>

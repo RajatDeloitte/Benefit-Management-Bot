@@ -9,14 +9,17 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Xsl;
+using Newtonsoft.Json;
 
 namespace WcfEmailService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
+    [KnownType(typeof(Object))]
     public class Service1 : IService1
     {
 
@@ -30,10 +33,20 @@ namespace WcfEmailService
             }
         }
 
-        public bool SendEmail(List<String> ToAddress, Object ValidationObject, String Subject)
+        public Object XMLToObject(string XMLString, Object oObject)
         {
+
+            XmlSerializer oXmlSerializer = new XmlSerializer(oObject.GetType());
+            oObject = oXmlSerializer.Deserialize(new StringReader(XMLString));
+            return oObject;
+        }
+
+        public bool SendEmail(string[] ToAddress,string ObjToXML, string Subject,string host,string FromEmail,string username,
+                                                                                                        string password,string port)
+        {
+            object obj1 = new object();
             MailMessage mailmessage = new MailMessage();
-            mailmessage.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
+            mailmessage.From = new MailAddress(FromEmail);
             mailmessage.Subject = Subject;
             mailmessage.IsBodyHtml = true;
 
@@ -41,9 +54,9 @@ namespace WcfEmailService
             {
                 mailmessage.To.Add(new MailAddress(item));
             }
-            string ObjToXML = ToXML(ValidationObject);
-
-            string XSLTString = File.ReadAllText(@"..\..\..\WcfEmailService\Transform.xslt");
+            //string ObjToXML = ToXML(ValidationObject);
+            string path = HttpContext.Current.Server.MapPath("~/Transform.xslt");
+            string XSLTString = File.ReadAllText(path);
 
             TextReader tr2 = new StringReader(XSLTString);
             var tr22 = new XmlTextReader(tr2);
@@ -57,11 +70,11 @@ namespace WcfEmailService
             xsltransform.Transform(reader, null, tw);
             mailmessage.Body = tw.ToString(); ;
             SmtpClient smtp = new SmtpClient();
-            smtp.Host = System.Configuration.ConfigurationManager.AppSettings["Host"];
+            smtp.Host = host;
             smtp.EnableSsl = true;
-            NetworkCredential NetworkCred = new NetworkCredential(ConfigurationManager.AppSettings["Username"], ConfigurationManager.AppSettings["Password"]);
+            NetworkCredential NetworkCred = new NetworkCredential(username, password);
             smtp.UseDefaultCredentials = true;
-            smtp.Port = int.Parse(ConfigurationManager.AppSettings["Port"]);
+            smtp.Port = int.Parse(port);
             smtp.Credentials = NetworkCred;
 
             Console.WriteLine("Sending Email......");

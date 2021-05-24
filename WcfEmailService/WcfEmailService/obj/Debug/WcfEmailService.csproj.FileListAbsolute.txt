@@ -5,3 +5,6 @@ C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfE
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.dll
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.pdb
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csprojAssemblyReference.cache
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.dll
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.xml
+C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csproj.CopyComplete
