@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
-using System.Data.SqlClient;
 using System.Data;
 using ServiceReference1;
 using Newtonsoft.Json;
@@ -20,6 +19,8 @@ namespace BMBOT
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter any key to proceed");
+            Console.ReadLine();
             using (ApplicationContext _application = new ApplicationContext())
             {
                 var botprofiles = _application.BOTProfile.ToList();
@@ -54,56 +55,8 @@ namespace BMBOT
 
                 }
             }
-
-
-
-        }
-
-        private static string ExecuteSP(string SPName, List<Parameters> Parameters)
-        {
-            using (ApplicationContext _application = new ApplicationContext())
-            {
-                SqlConnection connection = (SqlConnection)_application.Database.GetDbConnection();
-
-                var command = connection.CreateCommand();
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = SPName;
-                foreach (var param in Parameters)
-                {
-                    command.Parameters.AddWithValue(param.ParamName, param.ParamValue);
-                }
-
-                SqlDataAdapter da = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                string str = dt.Rows[0][0].ToString();
-
-                return str;
-
-            }
-
-        }
-
-        private static string ExecuteQuery(string QueryString, List<Parameters> Parameters)
-        {
-            using (ApplicationContext _application = new ApplicationContext())
-            {
-                SqlConnection connection = (SqlConnection)_application.Database.GetDbConnection();
-                SqlCommand command = new SqlCommand(QueryString, connection);
-                foreach (var param in Parameters)
-                {
-                    command.Parameters.AddWithValue(param.ParamName, param.ParamValue);
-                }
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    return (string)reader[0];
-                }
-
-                return "";
-            }
+            Console.WriteLine("Process Completed");
+            Console.ReadLine();
 
         }
 
@@ -133,6 +86,7 @@ namespace BMBOT
                 validationMapping = _application.BOTTemplateValidationMapping.ToList();
 
             }
+            Console.WriteLine("Reading File - " + fileName);
             if (!string.IsNullOrWhiteSpace(textFile))
             {
                 var fileContent = File.ReadAllLines(textFile);
@@ -160,6 +114,7 @@ namespace BMBOT
                     }
             }
 
+            Console.WriteLine("Validating File - " + fileName);
             foreach (var record in records)
             {
                 record.Columns = new List<Column>();
@@ -316,6 +271,7 @@ namespace BMBOT
 
             if (ErrorRecords.Any())
             {
+                Console.WriteLine("Sending Email For File - "+ fileName);
                 string Subject = fileName + " Validation Results";
                 List<string> toaddress = new List<string>() { "rajatarora9@deloitte.com" };
                 ServiceReference1.Service1Client emailservice = new Service1Client();
@@ -352,7 +308,8 @@ namespace BMBOT
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    Console.WriteLine("Exception Occoured - " + ex.Message);
+                    Console.ReadKey();
                 }
             }
         }

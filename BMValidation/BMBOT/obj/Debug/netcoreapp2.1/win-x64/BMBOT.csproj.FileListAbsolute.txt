@@ -1,0 +1,16 @@
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\hostpolicy.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\hostfxr.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.exe
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.dll.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.deps.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.runtimeconfig.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.runtimeconfig.dev.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Debug\netcoreapp2.1\win-x64\BMBOT.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.AssemblyInfoInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.AssemblyInfo.cs
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Debug\netcoreapp2.1\win-x64\BMBOT.genruntimeconfig.cache

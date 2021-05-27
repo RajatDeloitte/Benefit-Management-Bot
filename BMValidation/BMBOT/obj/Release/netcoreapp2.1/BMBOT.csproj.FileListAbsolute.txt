@@ -1,0 +1,13 @@
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.dll.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.deps.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.runtimeconfig.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.runtimeconfig.dev.json
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\BMBOT.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.AssemblyInfoInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.AssemblyInfo.cs
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\obj\Release\netcoreapp2.1\BMBOT.genruntimeconfig.cache

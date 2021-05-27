@@ -45,29 +45,29 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.6, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.2.6, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.6, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[2.1.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -82,6 +82,14 @@
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "System.Interactive.Async": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "System.Private.ServiceModel": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             },
             "System.ServiceModel.Duplex": {
               "target": "Package",

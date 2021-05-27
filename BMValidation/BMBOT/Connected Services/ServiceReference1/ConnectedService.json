@@ -63,7 +63,6 @@
       "System.Core, {Microsoft.NETCore.App, 2.1.0}",
       "System.Data, {Microsoft.NETCore.App, 2.1.0}",
       "System.Data.Common, {Microsoft.NETCore.App, 2.1.0}",
-      "System.Data.SqlClient, {System.Data.SqlClient, 4.6.1}",
       "System.Diagnostics.Contracts, {Microsoft.NETCore.App, 2.1.0}",
       "System.Diagnostics.Debug, {Microsoft.NETCore.App, 2.1.0}",
       "System.Diagnostics.DiagnosticSource, {Microsoft.NETCore.App, 2.1.0}",
