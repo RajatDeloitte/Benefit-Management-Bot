@@ -17,5 +17,7 @@ namespace BMBOT
         public DbSet<BOTTemplate> BOTTemplate { get; set; }
         public DbSet<BOTTemplateColumns> BOTTemplateColumns { get; set; }
         public DbSet<BOTTemplateValidationMapping> BOTTemplateValidationMapping { get; set; }
-}
+
+        public DbSet<BOTFileLocationConfiguration> BOTFileLocationConfiguration { get; set; }
+    }
 }

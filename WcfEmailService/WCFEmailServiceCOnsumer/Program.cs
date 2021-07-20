@@ -28,7 +28,7 @@ namespace WCFEmailServiceCOnsumer
 
             validationObj.Records.Add(r);
 
-            Console.WriteLine(service.SendEmail(ToAddress,validationObj, "Benefit Management Validatio Bot"));
+            //Console.WriteLine(service.SendEmail(ToAddress,validationObj, "Benefit Management Validatio Bot"));
             Console.ReadKey();
         }
     }

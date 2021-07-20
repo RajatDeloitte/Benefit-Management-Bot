@@ -10,8 +10,8 @@ using System.Data;
 using ServiceReference1;
 using Newtonsoft.Json;
 using System.Xml.Serialization;
-using System.Xml;
 using System.Configuration;
+using System.Threading.Tasks;
 
 namespace BMBOT
 {
@@ -19,8 +19,16 @@ namespace BMBOT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter any key to proceed");
+            Console.WriteLine("Press any key to continue");
+            DateTime runDate = DateTime.Now.Date;
+            if (args != null && args.Length > 0 &&  DateTime.TryParse(args[0], out runDate))
+            {
+                runDate = runDate.AddHours(23).AddMinutes(59).AddSeconds(59);
+            }
             Console.ReadLine();
+
+            validateFilesFromLocation(runDate);
+
             using (ApplicationContext _application = new ApplicationContext())
             {
                 var botprofiles = _application.BOTProfile.ToList();
@@ -58,6 +66,130 @@ namespace BMBOT
             Console.WriteLine("Process Completed");
             Console.ReadLine();
 
+        }
+
+        public static void validateFilesFromLocation(DateTime runDate)
+        {
+            using (ApplicationContext _application = new ApplicationContext())
+            {
+
+                // Validate if the file is moved from location.
+
+                var botFileLocationConfiguration = _application.BOTFileLocationConfiguration.ToList();
+
+                var pickedFileConfiguration = botFileLocationConfiguration.FirstOrDefault(x => x.ValidationType == "PICKED");
+
+                FileCheckError fileNotPicked = new FileCheckError();
+                fileNotPicked.FileObjects = new List<FileObject>();
+                if (pickedFileConfiguration.FileLocation.EndsWith(@"\"))
+                {
+                    DirectoryInfo dPickedFileConfiguration = new DirectoryInfo(pickedFileConfiguration.FileLocation);
+                    List<FileInfo> pickedFiles = dPickedFileConfiguration.GetFiles("*.txt").ToList();
+                    fileNotPicked.RunDate = runDate.ToString();
+                    foreach (var file in pickedFiles)
+                    {
+                        //TimeSpan? timespan = pickedFileConfiguration.ValidationTime;
+                        DateTime timeToCompare = file.CreationTime;
+                        if (runDate > timeToCompare)
+                        {
+                            FileObject errorFile = new FileObject();
+                            errorFile.Date = timeToCompare.ToString();
+                            errorFile.FileName = file.Name;
+                            errorFile.Issue = "Not Transferred";
+                            fileNotPicked.FileObjects.Add(errorFile);
+                        }
+                    }
+                    fileNotPicked.FilesCount = fileNotPicked.FileObjects.Count().ToString();
+                }
+
+                FileCheckError fileErrorNotCreated = new FileCheckError();
+                fileErrorNotCreated.FileObjects = new List<FileObject>();
+
+                foreach (var fileconfiguration in botFileLocationConfiguration)
+                {
+                    if (fileconfiguration.FileLocation.EndsWith(@"\"))
+                    {
+                        DirectoryInfo dFileconfiguration = new DirectoryInfo(fileconfiguration.FileLocation);
+                        List<FileInfo> files = dFileconfiguration.GetFiles("*.txt").ToList();
+                        DateTime batchRunDate = DateTime.Now.Date;
+                        TimeSpan? timespan = fileconfiguration.ValidationTime;
+                        fileErrorNotCreated.RunDate = runDate.ToString();
+                        switch (fileconfiguration.Frequency)
+                        {
+                            case "DAILY":
+                                if (timespan.HasValue)
+                                {
+                                    batchRunDate = batchRunDate.Add(timespan.Value);
+                                }
+                                if (!files.Any(x => x.Name.Contains(fileconfiguration.FileNameStartsWith) && x.CreationTime > batchRunDate))
+                                {
+                                    FileObject fileNotCreated = new FileObject();
+                                    fileNotCreated.Date = batchRunDate.ToString();
+                                    fileNotCreated.FileName = fileconfiguration.FileNameStartsWith;
+                                    fileNotCreated.Issue = "Not Created";
+                                    fileErrorNotCreated.FileObjects.Add(fileNotCreated);
+                                    //error
+                                }
+                                break;
+                            case "WEEKLY":
+                                //TimeSpan? timespan = fileconfiguration.ValidationTime;
+                                if ((int)batchRunDate.DayOfWeek == fileconfiguration.DayOfTheWeek)
+                                {
+                                    if (timespan.HasValue)
+                                    {
+                                        batchRunDate = batchRunDate.Add(timespan.Value);
+                                    }
+                                    if (!files.Any(x => x.Name.Contains(fileconfiguration.FileNameStartsWith) && x.CreationTime > batchRunDate))
+                                    {
+                                        FileObject fileNotCreated = new FileObject();
+                                        fileNotCreated.Date = batchRunDate.ToString();
+                                        fileNotCreated.FileName = fileconfiguration.FileNameStartsWith;
+                                        fileNotCreated.Issue = "Not Created";
+                                        fileErrorNotCreated.FileObjects.Add(fileNotCreated);
+                                    }
+                                }
+                                break;
+                            case "MONTHLY":
+                                //TimeSpan? timespan = fileconfiguration.ValidationTime;
+                                if (fileconfiguration.ValidationDate.HasValue && batchRunDate == fileconfiguration.ValidationDate.Value.Date)
+                                {
+                                    if (timespan.HasValue)
+                                    {
+                                        batchRunDate = batchRunDate.Add(timespan.Value);
+                                    }
+                                    if (!files.Any(x => x.Name.Contains(fileconfiguration.FileNameStartsWith) && x.CreationTime > batchRunDate))
+                                    {
+                                        FileObject fileNotCreated = new FileObject();
+                                        fileNotCreated.Date = batchRunDate.ToString();
+                                        fileNotCreated.FileName = fileconfiguration.FileNameStartsWith;
+                                        fileNotCreated.Issue = "Not Created";
+                                        fileErrorNotCreated.FileObjects.Add(fileNotCreated);
+                                    }
+                                }
+                                break;
+                        }
+                    }
+                }
+
+                fileErrorNotCreated.FilesCount = fileErrorNotCreated.FileObjects.Count().ToString();
+                List<string> toaddress = new List<string>() { "rajatarora9@deloitte.com" };
+                if (fileErrorNotCreated.FileObjects.Count > 0)
+                {
+                    string validationObj = ToXML(fileErrorNotCreated);
+                    //call email api to send email for file not created
+                    string path = Path.GetFullPath("C:/Users/rajatarora9/Desktop/BMBot/Benefit-Management-Bot/BMValidation/BMBOT/XSLTFormat/Transform1.xslt");
+                    string xsltformat = File.ReadAllText(path);
+                    sendEmail(toaddress, validationObj, "File Not Created", xsltformat);
+                }
+                if (fileNotPicked.FileObjects.Count > 0)
+                {
+                    string validationObj = ToXML(fileNotPicked);
+                    //call email api to send email for file not picked
+                    string path = Path.GetFullPath("C:/Users/rajatarora9/Desktop/BMBot/Benefit-Management-Bot/BMValidation/BMBOT/XSLTFormat/Transform1.xslt");
+                    string xsltformat = File.ReadAllText(path);
+                    sendEmail(toaddress, validationObj, "File Not Picked",xsltformat);
+                }
+            }
         }
 
         public static string ToXML(Object obj)
@@ -274,7 +406,7 @@ namespace BMBOT
                 Console.WriteLine("Sending Email For File - "+ fileName);
                 string Subject = fileName + " Validation Results";
                 List<string> toaddress = new List<string>() { "rajatarora9@deloitte.com" };
-                ServiceReference1.Service1Client emailservice = new Service1Client();
+
 
                 ValidationObject obj = new ValidationObject();
                 obj.totalRecords = records.Count(); ;
@@ -296,21 +428,31 @@ namespace BMBOT
 
                 string validationObj = ToXML(obj);
 
-                string host = ConfigurationManager.AppSettings["Host"];
-                string fromEmail = ConfigurationManager.AppSettings["FromEmail"];
-                string username = ConfigurationManager.AppSettings["Username"];
-                string password = ConfigurationManager.AppSettings["Password"];
-                string port = ConfigurationManager.AppSettings["Port"];
+                string path = Path.GetFullPath("C:/Users/rajatarora9/Desktop/BMBot/Benefit-Management-Bot/BMValidation/BMBOT/XSLTFormat/Transform.xslt");
+                string xsltformat = File.ReadAllText(path);
 
-                try
-                {
-                    bool res = emailservice.SendEmail(toaddress.ToArray(), validationObj, Subject, host, fromEmail, username, password, port);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Exception Occoured - " + ex.Message);
-                    Console.ReadKey();
-                }
+                sendEmail(toaddress, validationObj, Subject, xsltformat);
+                
+            }
+        }
+
+        public static void sendEmail(List<string> toaddress, string validationObj, string Subject, string xsltFormat)
+        {
+            ServiceReference1.Service1Client emailservice = new Service1Client();
+            string host = ConfigurationManager.AppSettings["Host"];
+            string fromEmail = ConfigurationManager.AppSettings["FromEmail"];
+            string username = ConfigurationManager.AppSettings["Username"];
+            string password = ConfigurationManager.AppSettings["Password"];
+            string port = ConfigurationManager.AppSettings["Port"];
+
+            try
+            {
+                Task<bool> res = emailservice.SendEmailAsync(toaddress.ToArray(), validationObj, Subject, host, fromEmail, username, password, port, xsltFormat);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Occoured - " + ex.Message);
+                Console.ReadKey();
             }
         }
     }

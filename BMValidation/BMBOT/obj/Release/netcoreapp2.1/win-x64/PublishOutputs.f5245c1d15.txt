@@ -3,6 +3,8 @@ C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\BMBOT.runtimeconfig.json
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\BMBOT.dll.config
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\BMBOT.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.EntityFrameworkCore.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.EntityFrameworkCore.Relational.dll
@@ -196,6 +198,7 @@ C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\System.ServiceModel.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\System.ServiceModel.Security.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\System.Text.Encoding.CodePages.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\System.Text.Encodings.Web.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\System.Private.CoreLib.dll
 C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\BMValidation\BMBOT\bin\Release\netcoreapp2.1\publish\api-ms-win-core-console-l1-1-0.dll

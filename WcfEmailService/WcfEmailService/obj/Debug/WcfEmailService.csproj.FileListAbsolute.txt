@@ -8,3 +8,13 @@ C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfE
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.dll
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.xml
 C:\Users\rajatarora9\source\repos\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csproj.CopyComplete
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\bin\WcfEmailService.dll.config
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\bin\WcfEmailService.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\bin\WcfEmailService.pdb
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\bin\Newtonsoft.Json.xml
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csprojAssemblyReference.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csproj.CoreCompileInputs.cache
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.csproj.CopyComplete
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.dll
+C:\Users\rajatarora9\Desktop\BMBot\Benefit-Management-Bot\WcfEmailService\WcfEmailService\obj\Debug\WcfEmailService.pdb

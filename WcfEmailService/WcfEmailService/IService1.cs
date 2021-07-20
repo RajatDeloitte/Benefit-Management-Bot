@@ -22,7 +22,7 @@ namespace WcfEmailService
         [OperationContract]
         [WebGet(UriTemplate = "/HelloWorld/")]
         bool SendEmail(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username,
-                                                                                                        string password, string port);
+                                                                                                        string password, string port, string xsltformat);
 
         // TODO: Add your service operations here
     }

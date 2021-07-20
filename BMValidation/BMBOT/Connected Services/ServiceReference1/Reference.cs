@@ -55,22 +55,13 @@ namespace ServiceReference1
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        ServiceReference1.CompositeType GetDataUsingDataContract(ServiceReference1.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ServiceReference1.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendEmail", ReplyAction="http://tempuri.org/IService1/SendEmailResponse")]
-        bool SendEmail(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendEmail", ReplyAction="http://tempuri.org/IService1/SendEmailResponse")]
-        System.Threading.Tasks.Task<bool> SendEmailAsync(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port);
+        System.Threading.Tasks.Task<bool> SendEmailAsync(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port, string xsltformat);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -123,19 +114,9 @@ namespace ServiceReference1
         {
         }
         
-        public string GetData(int value)
-        {
-            return base.Channel.GetData(value);
-        }
-        
         public System.Threading.Tasks.Task<string> GetDataAsync(int value)
         {
             return base.Channel.GetDataAsync(value);
-        }
-        
-        public ServiceReference1.CompositeType GetDataUsingDataContract(ServiceReference1.CompositeType composite)
-        {
-            return base.Channel.GetDataUsingDataContract(composite);
         }
         
         public System.Threading.Tasks.Task<ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ServiceReference1.CompositeType composite)
@@ -143,14 +124,9 @@ namespace ServiceReference1
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public bool SendEmail(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port)
+        public System.Threading.Tasks.Task<bool> SendEmailAsync(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port, string xsltformat)
         {
-            return base.Channel.SendEmail(ToAddress, ObjToXML, Subject, host, FromEmail, username, password, port);
-        }
-        
-        public System.Threading.Tasks.Task<bool> SendEmailAsync(string[] ToAddress, string ObjToXML, string Subject, string host, string FromEmail, string username, string password, string port)
-        {
-            return base.Channel.SendEmailAsync(ToAddress, ObjToXML, Subject, host, FromEmail, username, password, port);
+            return base.Channel.SendEmailAsync(ToAddress, ObjToXML, Subject, host, FromEmail, username, password, port, xsltformat);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

@@ -42,7 +42,7 @@ namespace WcfEmailService
         }
 
         public bool SendEmail(string[] ToAddress,string ObjToXML, string Subject,string host,string FromEmail,string username,
-                                                                                                        string password,string port)
+                                                                                                        string password,string port, string xsltformat)
         {
             object obj1 = new object();
             MailMessage mailmessage = new MailMessage();
@@ -55,8 +55,8 @@ namespace WcfEmailService
                 mailmessage.To.Add(new MailAddress(item));
             }
             //string ObjToXML = ToXML(ValidationObject);
-            string path = HttpContext.Current.Server.MapPath("~/Transform.xslt");
-            string XSLTString = File.ReadAllText(path);
+            //string path = HttpContext.Current.Server.MapPath("~/Transform1.xslt");
+            string XSLTString = xsltformat;
 
             TextReader tr2 = new StringReader(XSLTString);
             var tr22 = new XmlTextReader(tr2);
@@ -73,7 +73,7 @@ namespace WcfEmailService
             smtp.Host = host;
             smtp.EnableSsl = true;
             NetworkCredential NetworkCred = new NetworkCredential(username, password);
-            smtp.UseDefaultCredentials = true;
+            smtp.UseDefaultCredentials = false;
             smtp.Port = int.Parse(port);
             smtp.Credentials = NetworkCred;
 
